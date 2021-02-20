@@ -1,0 +1,158 @@
+{block content}
+<section class="start-section">
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-6">
+         <h1>{$page->heading}</h1>
+         <p>{$page->subHeading}</p>
+         <div class="button-container desktop-buton">
+           <a href="/kontakt" class="blue-button">Chci více informací</a>
+         </div>
+       </div>
+
+       <div class="col-lg-6">
+         <img src="{$basePath}/content/page/{$page->category}/{$page->name}.{$page->extension}" alt="HLavní fotka">
+       </div>
+     </div>
+   </div>
+ </section>
+ <section class="info">
+   <div class="container">
+     <div class="info-content">
+       <div class="info-heading">
+         <p>BUDE VÁS ZAJÍMAT</p>
+       </div>
+       <div class="info-content">
+         <p>{$page->info}</p>
+       </div>
+     </div>
+   </div>
+ </section>
+ <section class="dotace">
+   <div class="container">
+     <h2 class="heading">VÝŠE DOTACE ?</h2>
+     <span class="small">Vyberte svůj kraj</span>
+     <div class="mobile-show">
+       <select class="select-box" name="">
+          {foreach $dotace as $key => $item}
+            <option value="t-{$key}">{$item->kraj->text}</option>
+          {/foreach}
+       </select>
+     </div>
+     <div class="dotace-tabulka">
+       <div class="dotace-heading">
+          {foreach $dotace as $key => $item}
+            <a href="#" data-id="t-{$key}"  title="{$item->kraj->text}">{$item->kraj->text}</a>
+          {/foreach}
+       </div>
+       <div>
+
+            {foreach $dotace as $key => $item}
+              <div class="dotace-content " id="t-{$key}">
+                <div class="dotace-text">
+                  <p>{$item->content}</p>
+                </div>
+                <div class="dotace-bottom">
+                  <div class="dotace-info">
+                    <p><span>Výše dotace: </span>{$item->dotace_price}</p>
+                    <p><span>Celková cena: </span>{$item->price}</p>
+                    <p><span>Vaše cena: </span>{$item->your_price}</p>
+                  </div>
+                  <div class="dotace-more">
+                    <a href="/kontakt" title="dotace-more">
+                      <span>Chci požádat o dotaci</span>
+                      <span class="sipka"><img src="{$basePath}/design/icons/dotace-arrow.svg" alt="Dotace arrow"></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            {/foreach}
+       </div>
+     </div>
+   </div>
+ </section>
+ <section class="service_info">
+   <div class="container">
+     <div class="service_info-table">
+       <div class="row">
+         <div class="col-lg-6">
+           <ul>
+              {foreach $columns["first_part"] as $item}
+                <li>{$item->text|noescape}</li>
+              {/foreach}
+           </ul>
+         </div>
+        {if isset($columns['last_part'])}
+          <div class="col-lg-6">
+           <ul>
+              {foreach $columns["last_part"] as $item}
+                <li>{$item->text|noescape}</li>
+              {/foreach}
+           </ul>
+         </div>
+        {/if}
+
+       </div>
+     </div>
+     <div class="service_info-button--div">
+       <a href="#" class="service_info-button">Co je v sestavě ?</a>
+     </div>
+   </div>
+ </section>
+ <section class="routine">
+   <div class="container">
+     <div class="routine-heading">
+
+        {foreach $pageDay as $key => $value}
+          
+          <a href="#" data-id="r-{$key}" class="routine-heading_item {if $value->type == morning}active{/if}">{$value->name}</a>
+          <div class="routine-content mobile" id="r-{$key}">
+            <div class="row">
+              <div class="col-md-5 d-flex align-items-center">
+                <div class="routine-content-item routine-text">
+                  <div class="routine-content-text {if $value->type == morning}sun{/if}">
+                    <p>{$value->text}</p>
+                  </div>
+                  <div class="routine-button">
+                    <a href="/kontakt" class="blue-button">chci ohřívat vodu zdarma</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="routine-content-item">
+                  <img src="{$basePath}/content/page_day/{$value->type}_{$page->id}.{$value->extension}" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        {/foreach}
+     </div>
+     <div>
+        {foreach $pageDay as $key => $value}
+    
+          <div class="routine-content desktop" id="rr-{$key}">
+            <div class="row">
+              <div class="col-md-5 d-flex align-items-center">
+                <div class="routine-content-item routine-text">
+                  <div class="routine-content-text {if $value->type == morning}sun{/if}">
+                    <p>{$value->text}</p>
+                  </div>
+                  <div class="routine-button">
+                    <a href="/kontakt" class="blue-button">chci ohřívat vodu zdarma</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="routine-content-item">
+                  <img src="{$basePath}/content/page_day/{$value->type}_{$page->id}.{$value->extension}" alt="morning">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        {/foreach}
+     </div>
+   </div>
+ </section>
+
+{/block}
