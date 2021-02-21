@@ -16,11 +16,22 @@ final class RouterFactory
 	{
 		$router = new RouteList;
 
-        $router[] = new Route('ohrev-teple-vody/<name>', array(
-            'presenter' => 'MainPages',
+       /* */
+
+       
+
+
+        /* ADMIN */
+        $admin = new RouteList('Admin');
+
+		$admin[] = new Route('admin/<presenter>/<action>[/<id>]', array(
+            'presenter' => 'Dashboard',
             'action' => 'default',
-            'category' => 'ohrev-teple-vody',
         ));
+
+
+        /* FRONT */
+		$front = new RouteList('Front');
 
         $router[] = new Route('akumulace-do-baterii/<name>', array(
             'presenter' => 'MainPages',
@@ -28,12 +39,22 @@ final class RouterFactory
             'category' => 'akumulace-do-baterii',
         ));
 
-        $router[] = new Route('<presenter>/<action>', array(
+
+        $front[] = new Route('ohrev-teple-vody/<name>', array(
+            'presenter' => 'MainPages',
+            'action' => 'default',
+            'category' => 'ohrev-teple-vody',
+        ));
+
+        $front[] = new Route('<presenter>/<action>', array(
             'presenter' => 'Homepage',
             'action' => 'default',
         ));
 
-		
+
+
+		$router[] = $admin;
+		$router[] = $front;
 
 
         return $router;
