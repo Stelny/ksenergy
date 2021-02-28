@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'edd5608a0d6e5d6c52871924f3092a20976bd627',
+    'reference' => 'dc62ec22f387c7984a6f477f088281826ed8dc2d',
     'name' => 'nette/web-project',
   ),
   'versions' => 
@@ -213,7 +213,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'edd5608a0d6e5d6c52871924f3092a20976bd627',
+      'reference' => 'dc62ec22f387c7984a6f477f088281826ed8dc2d',
     ),
     'symfony/thanks' => 
     array (

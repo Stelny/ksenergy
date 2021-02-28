@@ -38,10 +38,26 @@ final class RouterFactory
             'action' => 'default',
             'category' => 'akumulace-do-baterii',
         ));
+
+        $front[] = new Route('kontakt', array(
+            'presenter' => 'Contact',
+            'action' => 'default',
+        ));
+
         $front[] = new Route('tepelna-cerpadla', array(
             'presenter' => 'MainPages',
             'action' => 'cerpadlo',
             'category' => 'akumulace-do-baterii',
+        ));
+
+        $front[] = new Route('blog/<name>', array(
+            'presenter' => 'Blog',
+            'action' => 'detail',
+        ));
+
+        $front[] = new Route('blog', array(
+            'presenter' => 'Blog',
+            'action' => 'default',
         ));
 
 

@@ -1,0 +1,58 @@
+{block content}
+    <div class="content">
+            <!-- Start Content-->
+            <div class="container-fluid">
+
+                <div class="row page-title">
+                    <div class="col-md-12">
+                        <nav aria-label="breadcrumb" class="float-right mt-1">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{$basePath}/admin">Blog</a></li>
+                            </ol>
+                        </nav>
+                        <h4 class="mb-1 mt-0">Blog</h4>
+                    </div>
+                </div>
+            </div> <!-- container-fluid -->
+        </div> <!-- content -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <a n:href="Blog:detail" title="" class="btn btn-success mb-3">Přidat</a>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Jméno</th>
+                                        <th scope="col">Obrázek</th>
+                                        <th scope="col">Odstranit</th>
+                                        <th scope="col">Upravit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {foreach $blog as $value}
+                                        <tr>
+                                            <td>
+                                                {$value->heading}
+                                            </td>
+                                            <td>
+                                                <img src="{$basePath}/content/blog/{$value->id}.{$value->extension}" alt="" height="100">
+                                            </td>
+                                            <td>
+                                                <a n:href="Blog:delete $value->id" title="Delete" class="text-dark"><i data-feather="trash"></i></a>
+                                            </td>
+                                            <td>
+                                                <a n:href="Blog:detail $value->id" title="Delete" class="text-dark"><i data-feather="edit"></i></a>
+                                            </td>
+                                        </tr>
+                                    {/foreach}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> <!-- end card body-->
+                </div> <!-- end card -->
+            </div>
+            <!-- end col-12 -->
+        </div> <!-- end row -->
+{/block}

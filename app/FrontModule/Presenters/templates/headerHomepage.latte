@@ -80,7 +80,7 @@
 							</svg>
 						</div>
 						<div class="top__header--text">
-							<p><a href="tel:+420 775 141 355">Klientský servis: +420 775 141 355</a></p>
+							<p><a href="tel:{$settings['phone']}">Klientský servis: {$settings['phone']}</a></p>
 						</div>
 					</div>
 				</div>
@@ -95,7 +95,7 @@
 							</svg>
 						</div>
 						<div class="top__header--text">
-							<p><a href="" title="email">Email: info@ksenergy.cz</a></p>
+							<p><a href="mailto: {$settings['email']}" title="email">Email: {$settings['email']}</a></p>
 						</div>
 					</div>
 				</div>
@@ -105,10 +105,10 @@
 	<header>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<div class="container">
-			  <a class="navbar-brand" href="/">
+			  <a class="navbar-brand" href="{$basePath}">
 						<img src="{$basePath}/design/icons/logo.png" alt="logo">
 				</a>
-				<a class="navbar-brand-mobile" href="/">
+				<a class="navbar-brand-mobile" href="{$basePath}">
 						<img src="{$basePath}/design/icons/logo-mobile.png" alt="logo-mobile">
 				</a>
 				<button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -145,6 +145,9 @@
 					</li>
 				      <li class="nav-item">
 				        <a class="nav-link" href="{plink Gallery:default}">Galerie</a>
+				      </li>
+					   <li class="nav-item">
+				        <a class="nav-link" href="{plink Blog:default}">Blog</a>
 				      </li>
 				      <li class="nav-item">
 				        <a class="nav-link" href="{plink Contact:default} ">Kontakt</a>

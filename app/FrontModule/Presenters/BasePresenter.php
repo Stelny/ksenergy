@@ -31,6 +31,9 @@ class BasePresenter extends Nette\Application\UI\Presenter
 
      /** @var \App\Model\GalleryModel */
      public $galleryModel;
+
+     /** @var \App\Model\BlogModel */
+     public $blogModel;
  
      public function inject(
          \App\Model\PagesModel $pagesModel,
@@ -39,7 +42,8 @@ class BasePresenter extends Nette\Application\UI\Presenter
          \App\Model\DotaceModel $dotaceModel,
          \App\Model\SettingsModel $settingsModel,
          \App\Model\DotaceKrajeModel $dotaceKrajeModel,
-         \App\Model\galleryModel $galleryModel
+         \App\Model\galleryModel $galleryModel,
+         \App\Model\blogModel $blogModel
          
      ) {
          $this->pagesModel = $pagesModel;
@@ -49,6 +53,7 @@ class BasePresenter extends Nette\Application\UI\Presenter
          $this->dotaceKrajeModel = $dotaceKrajeModel;
          $this->settingsModel = $settingsModel;
          $this->galleryModel = $galleryModel;
+         $this->blogModel = $blogModel;
      }
 
     public function beforeRender() {

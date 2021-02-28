@@ -7,7 +7,7 @@
          <h1>{$page->heading}</h1>
          <p>{$page->subHeading}</p>
          <div class="button-container desktop-buton">
-           <a href="/kontakt" class="blue-button">Chci více informací</a>
+           <a href="{plink Contact:default}" class="blue-button">Chci více informací</a>
          </div>
        </div>
 
@@ -62,7 +62,7 @@
                     <p><span>Vaše cena: </span>{$item->your_price}</p>
                   </div>
                   <div class="dotace-more">
-                    <a href="/kontakt" title="dotace-more">
+                    <a href="{plink Contact:default}" title="dotace-more">
                       <span>Chci požádat o dotaci</span>
                       <span class="sipka"><img src="{$basePath}/design/icons/dotace-arrow.svg" alt="Dotace arrow"></span>
                     </a>
@@ -120,13 +120,13 @@
                     <p>{$value->text}</p>
                   </div>
                   <div class="routine-button">
-                    <a href="/kontakt" class="blue-button">chci ohřívat vodu zdarma</a>
+                    <a href="{plink Contact:default}" class="blue-button">chci ohřívat vodu zdarma</a>
                   </div>
                 </div>
               </div>
               <div class="col-md-7">
                 <div class="routine-content-item">
-                  <img src="{$basePath}/content/page_day/{$value->type}_{$page->id}.{$value->extension}" alt="">
+                  <img src="{$basePath}/content/page_day/{$value->type}_{$page->id}.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -144,13 +144,13 @@
                     <p>{$value->text}</p>
                   </div>
                   <div class="routine-button">
-                    <a href="/kontakt" class="blue-button">chci ohřívat vodu zdarma</a>
+                    <a href="{plink Contact:default}" class="blue-button">chci ohřívat vodu zdarma</a>
                   </div>
                 </div>
               </div>
               <div class="col-md-7">
                 <div class="routine-content-item">
-                  <img src="{$basePath}/content/page_day/{$value->type}_{$page->id}.{$value->extension}" alt="morning">
+                  <img src="{$basePath}/content/page_day/{$value->type}_{$page->category}.jpg" alt="morning">
                 </div>
               </div>
             </div>

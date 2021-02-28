@@ -29,7 +29,6 @@ final class HomepagePresenter extends BasePresenter
 
 
 
-
         $this->template->dotace = $dotace;
 
         $this->template->gallery = $gallery;

@@ -8,7 +8,7 @@
            <h1>Ušetřete za vaší energii<span class="orange">.</span></h1>
            <p>Fotovoltaické elektrárny s garantovanou dotací.</p>
            <div class="button-section">
-             <a href="/kontakt" class="white-button">Napište nám</a>
+             <a href="{plink Contact:default}" class="white-button">Napište nám</a>
            </div>
          </div>
          <div class="col-lg-6">
@@ -29,10 +29,9 @@
      </div>
    </div>
  </section>
- 
  <div class="mobile-button">
    <div class="container">
-       <a href="/kontakt" class="blue-button">Napište mi</a>
+       <a href="{plink Contact:default}" class="blue-button">Napište mi</a>
    </div>
  </div>
  <section class="service">
@@ -132,7 +131,7 @@
                      <p>{$item->your_price}</p>
                    </div>
                  </div>
-                 <a href="/ohrev-teple-vody/1F-2,415kw" class="more-info">Více informací</a>
+                 <a href="{$basePath}/ohrev-teple-vody/{$item->page->name}" class="more-info">Více informací</a>
                </div>
                 {/if}
                
@@ -182,7 +181,7 @@
                      <p>{$item->your_price}</p>
                    </div>
                  </div>
-                 <a href="/ohrev-teple-vody/1F-2,415kw" class="more-info">Více informací</a>
+                 <a href="{$basePath}/akumulace-do-baterii/{$item->page->name}" class="more-info">Více informací</a>
                </div>
                 {/if}
                
@@ -235,7 +234,7 @@
                      <p>{$item->your_price}</p>
                    </div>
                  </div>
-                 <a href="/ohrev-teple-vody/1F-2,415kw" class="more-info">Více informací</a>
+                 <a href="{$basePath}/ohrev-teple-vody/{$item->page->name}" class="more-info">Více informací</a>
                </div>
                 {/if}
                
@@ -285,7 +284,7 @@
                      <p>{$item->your_price}</p>
                    </div>
                  </div>
-                 <a href="/ohrev-teple-vody/1F-2,415kw" class="more-info">Více informací</a>
+                 <a href="{$basePath}/akumulace-do-baterii/{$item->page->name}" class="more-info">Více informací</a>
                </div>
                 {/if}
                
@@ -295,6 +294,32 @@
      </div>
    </div>
  </section>
+
+ <div class="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div>
+            <h2>{$settings['o-nas-heading']}</h2>
+            <p>{$settings['o-nas']}</p>
+            <div class="green-button-div d-flex flex-wrap align-items-center">
+             <a href="{plink Contact:default}" class="green-button"><span>Chci vaše služby</span><span class="ml-2"><img src="{$basePath}/design/icons/arrow.svg" alt="arrow"></span></a>
+             <div class="about-neco">  
+              <p>99% úspěšnost</p>
+              <span>Získání dotací</span>
+             </div>
+           </div>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1">
+          <div>
+            <img src="{$basePath}/design/images/about.png" alt="O náš">
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+
  <section class="material">
    <div class="container">
      <h2 class="heading">Co vlastně děláme ?</h2>
@@ -450,7 +475,7 @@
  nám věří zákazníci.</h2>
            <p>{$settings['duvera']}</p>
            <div class="green-button-div">
-             <a href="/kontakt" class="green-button"><span>Chci vaše služby</span><span class="ml-2"><img src="{$basePath}/design/icons/arrow.svg" alt="arrow"></span></a>
+             <a href="{plink Contact:default}" class="green-button"><span>Chci vaše služby</span><span class="ml-2"><img src="{$basePath}/design/icons/arrow.svg" alt="arrow"></span></a>
            </div>
          </div>
        </div>
@@ -492,8 +517,7 @@
  <section class="py-5">
    <div class="homepage-gallery">
      <div class="container">
-       <h2 class="heading">Ukázka, jak to může
-vypadat i u Vás.</h2>
+       <h2 class="heading">Ukázka, jak to může vypadat i u Vás.</h2>
        <div class="homepage-gallery-content spotlight-group">
          <div class="owl-carousel owl-theme homepage-gallery-carousel">
 
@@ -504,8 +528,8 @@ vypadat i u Vás.</h2>
             {/foreach}
 					</div>
 				</div>
-                <div class="galery-button-div">
-         <a href="/galerie.php" title="bruh" class="galery-button">
+        <div class="galery-button-div">
+         <a href="{plink Gallery:default}" title="bruh" class="galery-button">
            <span>Celá galerie</span>
            <span class="ml-2">
              <svg xmlns="http://www.w3.org/2000/svg" width="5.116" height="8.948" viewBox="0 0 5.116 8.948">

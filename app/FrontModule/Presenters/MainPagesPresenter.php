@@ -20,7 +20,7 @@ class MainPagesPresenter extends BasePresenter
             $this->error();
         }
 
-        $pageDay = $this->pagesDayModel->getPagesDayById($page->id, $page->category);
+        $pageDay = $this->pagesDayModel->getPagesDayByCategory($category);
         
         $pageColumn = $this->pagesColumnModel->getPagesColumnByPageId($page->id);
 
@@ -48,11 +48,11 @@ class MainPagesPresenter extends BasePresenter
         }
 
         
-        
-
         /* TEMPLATE */
+            
+    
         $this->template->dotace = $dotace;
-
+        
         $this->template->pageDay = $pageDay;
 
         $this->template->columns = $columns;
