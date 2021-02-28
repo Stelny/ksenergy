@@ -48,7 +48,7 @@
              Žádné výpadky
            </div>
            <div class="service-text">
-             <p>Velkou výhodou je možnost fungování FVE systému při výpadku el. energie (Zálohování předem určených el. okruhů)</p>
+             <p>{$settings['zadne_vypadky']}</p>
            </div>
          </div>
        </div>
@@ -61,7 +61,7 @@
              Snížení poplatků
            </div>
            <div class="service-text">
-             Pokud se rozhodnete pro fotovoltaiku, můžete ušetřit až 20 000 Kč za rok. Budete nezávislí a nemusí vás trápit růst cen energií.
+             {$settings['snizeni_poplatku']}
            </div>
          </div>
        </div>
@@ -74,7 +74,7 @@
              Přebytky energie
            </div>
            <div class="service-text">
-             Vyrobenou energii si uložíte do baterii v době, kdy není v době spotřeba a využijete ji dle potřeby.
+             {$settings['prebytky_energie']}
            </div>
          </div>
        </div>
@@ -190,6 +190,7 @@
            </div>
           </div>
      </div>
+
      <div class="hp-content" id="m">
            <div class="hp-content-item">
              <h2><span>OHŘEV TEPLÉ VODY</span></h2>
@@ -447,7 +448,7 @@
          <div class="content-text">
            <h2 class="heading">Podívejte se jak
  nám věří zákazníci.</h2>
-           <p>Důvěra našich zákazníků je pro nás klíčová a na prvním místě. Máme za sebou stovky úspěšných instalací a stovky tisíc ušetřených peněz našich spokojených zákazníků.  Staňte se i vy našim zákazníkem a společně ušetříte jak energii tak náklady. </p>
+           <p>{$settings['duvera']}</p>
            <div class="green-button-div">
              <a href="/kontakt" class="green-button"><span>Chci vaše služby</span><span class="ml-2"><img src="{$basePath}/design/icons/arrow.svg" alt="arrow"></span></a>
            </div>
@@ -461,7 +462,7 @@
                  Ušetřených nákladů za poplatky
                </div>
                <div class="small-block">
-                 Přes 500 000 ,-
+                 {$settings['usetrene_poplatky']}
                </div>
              </div>
            </div>
@@ -471,7 +472,7 @@
                  Spokojených klientů
                </div>
                <div class="small-block">
-                 200+
+                 {$settings['spokojenych_klientu']}
                </div>
              </div>
              <div class="blue-block">
@@ -479,7 +480,7 @@
                  Nainstalovaných panelů
                </div>
                <div class="small-block">
-                 2000+
+                 {$settings["nainstalovanych_panelu"]}
                </div>
              </div>
            </div>
@@ -495,30 +496,12 @@
 vypadat i u Vás.</h2>
        <div class="homepage-gallery-content spotlight-group">
          <div class="owl-carousel owl-theme homepage-gallery-carousel">
-            <a href="{$basePath}/design/images/1.png" class="homepage-gallery-item spotlight">
-              <img src="{$basePath}/design/images/1.png" alt="1">
-            </a>
-            <a href="{$basePath}/design/images/2.png" class="homepage-gallery-item spotlight">
-              <img src="{$basePath}/design/images/2.png" alt="2">
-            </a>
-            <a href="{$basePath}/design/images/3.png" class="homepage-gallery-item spotlight">
-              <img src="{$basePath}/design/images/3.png" alt="3">
-            </a>
-            <a href="{$basePath}/design/images/4.png" class="homepage-gallery-item spotlight">
-              <img src="{$basePath}/design/images/4.png" alt="4">
-            </a>
-            <a href="{$basePath}/design/images/5.png" class="homepage-gallery-item spotlight">
-              <img src="{$basePath}/design/images/5.png" alt="5">
-            </a>
-            <a href="{$basePath}/design/images/6.png" class="homepage-gallery-item spotlight">
-              <img src="{$basePath}/design/images/6.png" alt="6">
-            </a>
-            <a href="{$basePath}/design/images/7.png" class="homepage-gallery-item spotlight">
-              <img src="{$basePath}/design/images/7.png" alt="7">
-            </a>
-            <a href="{$basePath}/design/images/8.png" class="homepage-gallery-item spotlight">
-              <img src="{$basePath}/design/images/8.png" alt="8">
-            </a>
+
+            {foreach $gallery as $item}
+              <a href="{$basePath}/content/gallery/{$item->id}.{$item->extension}" class="homepage-gallery-item spotlight">
+                <img src="{$basePath}/content/gallery/{$item->id}.{$item->extension}" alt="{$item->id}">
+              </a>
+            {/foreach}
 					</div>
 				</div>
                 <div class="galery-button-div">

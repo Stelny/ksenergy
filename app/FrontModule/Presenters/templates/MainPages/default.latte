@@ -1,4 +1,5 @@
 {block content}
+
 <section class="start-section">
    <div class="container">
      <div class="row">
@@ -11,7 +12,7 @@
        </div>
 
        <div class="col-lg-6">
-         <img src="{$basePath}/content/page/{$page->category}/{$page->name}.{$page->extension}" alt="HLavní fotka">
+         <img src="{$basePath}/content/page/{$page->id}.{$page->extension}" alt="HLavní fotka">
        </div>
      </div>
    </div>
@@ -28,7 +29,9 @@
      </div>
    </div>
  </section>
- <section class="dotace">
+
+ {if !empty($dotace)}
+     <section class="dotace">
    <div class="container">
      <h2 class="heading">VÝŠE DOTACE ?</h2>
      <span class="small">Vyberte svůj kraj</span>
@@ -71,6 +74,8 @@
      </div>
    </div>
  </section>
+ {/if}
+ {if !empty($columns)}
  <section class="service_info">
    <div class="container">
      <div class="service_info-table">
@@ -99,6 +104,7 @@
      </div>
    </div>
  </section>
+ {/if}
  <section class="routine">
    <div class="container">
      <div class="routine-heading">

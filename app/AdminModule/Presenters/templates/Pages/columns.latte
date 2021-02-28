@@ -1,0 +1,58 @@
+{block content}
+    <div class="content">
+
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <div class="row page-title">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb" class="float-right mt-1">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{$basePath}/admin">Stránka</a></li>
+                        </ol>
+                    </nav>
+
+                    <h4 class="mb-1 mt-0">Hlavní strana</h4>
+                </div>
+            </div>
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+    <div class="row">
+        <div class="col-12">
+            <a n:href="Dashboard:default" class="btn btn-danger mb-2" title="">Zpět</a>
+        </div>
+        <div class="col-12">
+            <a n:href="Pages:detailColumn $pageColumn[0]->page_id, true" class="btn btn-success mb-2" title="">Přidat</a>
+        </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="header-title mt-0 mb-3">Stránka</h4>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Jméno</th>
+                                        <th scope="col">Upravit</th>
+                                        <th scope="col">Odstranit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {foreach $pageColumn as $value}
+                                        <tr>
+                                            <td>
+                                                {$value->text}
+                                            </td>
+                                            <td><a n:href="Pages:detailColumn $value->id, false" title="Upravit" class="text-dark"><i data-feather="edit"></i></a></td>
+                                            <td><a n:href="Pages:deleteColumn $value->id, $value->page_id" title="Delete" class="text-dark"><i data-feather="trash"></i></a></td>
+                                        </tr>
+                                    {/foreach}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> <!-- end card body-->
+                </div> <!-- end card -->
+            </div>
+            <!-- end col-12 -->
+        </div> <!-- end row -->
+{/block}

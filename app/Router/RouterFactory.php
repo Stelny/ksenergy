@@ -33,9 +33,14 @@ final class RouterFactory
         /* FRONT */
 		$front = new RouteList('Front');
 
-        $router[] = new Route('akumulace-do-baterii/<name>', array(
+        $front[] = new Route('akumulace-do-baterii/<name>', array(
             'presenter' => 'MainPages',
             'action' => 'default',
+            'category' => 'akumulace-do-baterii',
+        ));
+        $front[] = new Route('tepelna-cerpadla', array(
+            'presenter' => 'MainPages',
+            'action' => 'cerpadlo',
             'category' => 'akumulace-do-baterii',
         ));
 

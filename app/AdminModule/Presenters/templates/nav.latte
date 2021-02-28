@@ -1,0 +1,126 @@
+{block content}
+
+
+        <!-- Topbar Start -->
+        <div class="navbar navbar-expand flex-column flex-md-row navbar-custom">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <a href="index.html" class="navbar-brand mr-0 mr-md-2 logo">
+                    <span class="logo-lg">
+                        <img src="{$basePath}/assets/images/logo.png" alt="" height="24" />
+                        <span class="d-inline h5 ml-1 text-logo">Shreyu</span>
+                    </span>
+                    <span class="logo-sm">
+                        <img src="{$basePath}/assets/images/logo.png" alt="" height="24">
+                    </span>
+                </a>
+
+                <ul class="navbar-nav bd-navbar-nav flex-row list-unstyled menu-left mb-0">
+                    <li class="">
+                        <button class="button-menu-mobile open-left disable-btn">
+                            <i data-feather="menu" class="menu-icon"></i>
+                            <i data-feather="x" class="close-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav flex-row ml-auto d-flex list-unstyled topnav-menu float-right mb-0">
+                    <li class="dropdown notification-list" data-toggle="tooltip" data-placement="left" title="Log Out">
+                        <a href="javascript:void(0);" class="nav-link right-bar-toggle">
+                            <i data-feather="log-out"></i>
+                        </a>
+                    </li>
+
+                    <li class="dropdown notification-list align-self-center profile-dropdown">
+                        <a class="nav-link dropdown-toggle nav-user mr-0" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <div class="media user-profile ">
+                                <img src="{$basePath}/assets/images/users/avatar-7.jpg" alt="user-image" class="rounded-circle align-self-center" />
+                                <div class="media-body text-left">
+                                    <h6 class="pro-user-name ml-2 my-0">
+                                        <span>Shreyu N</span>
+                                        <span class="pro-user-desc text-muted d-block mt-1">Administrator </span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- end Topbar -->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+            <div class="media user-profile mt-2 mb-2">
+                <img src="{$basePath}/assets/images/users/avatar-7.jpg" class="avatar-sm rounded-circle mr-2" alt="Shreyu" />
+                <img src="{$basePath}/assets/images/users/avatar-7.jpg" class="avatar-xs rounded-circle mr-2" alt="Shreyu" />
+
+                <div class="media-body">
+                    <h6 class="pro-user-name mt-0 mb-0">KSENERGY</h6>
+                    <span class="pro-user-desc">Administrator</span>
+                </div>
+                
+            </div>
+            <div class="sidebar-content">
+                <!--- Sidemenu -->
+                <div id="sidebar-menu" class="slimscroll-menu">
+                    <ul class="metismenu" id="menu-bar">
+                        <li class="menu-title">Navigace</li>
+                        <li>
+                            <a n:href="Dashboard:default">
+                                <i data-feather="home"></i>
+                                <span> Hlavní strana </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a n:href="Blog:default">
+                                <i data-feather="home"></i>
+                                <span> Blog</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a n:href="Gallery:default">
+                                <i data-feather="image"></i>
+                                <span> Galerie </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i data-feather="file-text"></i>
+                                <span> Stránky </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li>
+                                    <a n:href="Pages:default ohrev-teple-vody">Ohřev teplé vody</a>
+                                </li>
+                                <li>
+                                    <a n:href="Pages:default akumulace-do-baterii">Akumulace do baterií</a>
+                                </li>
+                                <li>
+                                    <a href="email-compose.html">Tepelná čerpadla</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a n:href="Settings:default">
+                                <i data-feather="settings"></i>
+                                <span> Nastavení </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Sidebar -->
+
+                <div class="clearfix"></div>
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+
+{/block}

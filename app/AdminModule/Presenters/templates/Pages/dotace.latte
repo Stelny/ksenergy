@@ -1,0 +1,51 @@
+{block content}
+    <div class="content">
+
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <div class="row page-title">
+                <div class="col-md-12">
+                    <nav aria-label="breadcrumb" class="float-right mt-1">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{$basePath}/admin">Dotace</a></li>
+                        </ol>
+                    </nav>
+
+                    <h4 class="mb-1 mt-0">Dotace</h4>
+                </div>
+            </div>
+        </div> <!-- container-fluid -->
+    </div> <!-- content -->
+    <div class="row">
+        
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="header-title mt-0 mb-3">Dotace</h4>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Watt</th>
+                                        <th scope="col">Kraj</th>
+                                        <th scope="col">Upravit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {foreach $dotace as $value}
+                                        <tr>
+                                            <td>{$value->watt}</td>
+                                            <td>{$value->kraj->text}</td>
+                                            <td><a n:href="Pages:dotaceDetail $value->id" title="Upravit" class="text-dark"><i data-feather="edit"></i></a></td>
+                                        </tr>
+                                    {/foreach}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> <!-- end card body-->
+                </div> <!-- end card -->
+            </div>
+            <!-- end col-12 -->
+        </div> <!-- end row -->
+{/block}

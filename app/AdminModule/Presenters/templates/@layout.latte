@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Shreyu - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{{$basePath}}/assets/images/favicon.ico">
+
+    <!-- Plugin css -->
+    <link href="{$basePath}/assets/libs/fullcalendar-core/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="{$basePath}/assets/libs/fullcalendar-daygrid/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="{$basePath}/assets/libs/fullcalendar-bootstrap/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="{$basePath}/assets/libs/fullcalendar-timegrid/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="{$basePath}/assets/libs/fullcalendar-list/main.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="{$basePath}/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="{$basePath}/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="{$basePath}/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div id="wrapper">
+
+    {include "nav.latte"}
+     <!-- Begin page -->
+        <div class="content-page">
+            {include content}
+        </div>
+    </div>
+ <!-- Vendor js -->
+    {syntax double}
+    <script src="{{$basePath}}/assets/js/vendor.min.js"></script>
+
+    <!-- plugin js -->
+    <script src="{{$basePath}}/assets/libs/moment/moment.min.js"></script>
+    <script src="{{$basePath}}/assets/libs/fullcalendar-core/main.min.js"></script>
+    <script src="{{$basePath}}/assets/libs/fullcalendar-bootstrap/main.min.js"></script>
+    <script src="{{$basePath}}/assets/libs/fullcalendar-daygrid/main.min.js"></script>
+    <script src="{{$basePath}}/assets/libs/fullcalendar-timegrid/main.min.js"></script>
+    <script src="{{$basePath}}/assets/libs/fullcalendar-list/main.min.js"></script>
+    <script src="{{$basePath}}/assets/libs/fullcalendar-interaction/main.min.js"></script>
+
+    <!-- App js -->
+    <script src="{{$basePath}}/assets/js/app.min.js"></script>
+
+    <!-- Calendar init -->
+    <script src="{{$basePath}}/assets/js/pages/calendar.init.js"></script>
+    {{/syntax}}
+
+</body>
+
+</html>
+

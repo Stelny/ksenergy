@@ -1,0 +1,49 @@
+{block content}
+    <div class="row">
+        <div class="col-12">
+            <a n:href="Settings:default" class="btn btn-danger mb-2" title="">Zpět</a>
+        </div>
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    {form settingsForm}
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="simpleinput">{label meta_key}</label>
+                                    <div class="col-lg-12">
+                                        {input meta_key, class => "form-control"}
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="example-textarea">{label describtion}</label>
+                                    <div class="col-lg-12">
+                                        {input describtion, class => "form-control",  rows => "5"}
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="example-textarea">{label meta_value}</label>
+                                    <div class="col-lg-12">
+                                        {input meta_value, class => "form-control",  rows => "5"}
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    
+                                    <div class="col-lg-12">
+                                        {input send, class => "btn btn-success"}
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>    
+                        {input id}         
+                    {/form}
+                </div> <!-- end card body-->
+            </div> <!-- end card -->
+        </div>
+        <!-- end col-12 -->
+    </div> <!-- end row -->
+{/block}

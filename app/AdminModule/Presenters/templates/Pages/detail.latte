@@ -1,0 +1,77 @@
+{block content}
+    <div class="row">
+        <div class="col-12">
+            <a n:href="Pages:default $page->category" class="btn btn-danger mb-2" title="">Zpět</a>
+        </div>
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    {form editPage}
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="simpleinput">{label name}</label>
+                                    <div class="col-lg-12">
+                                        {input name, class => "form-control"}
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="example-textarea">{label heading}</label>
+                                    <div class="col-lg-12">
+                                        {input heading, class => "form-control",  rows => "5"}
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="example-textarea">{label subHeading}</label>
+                                    <div class="col-lg-12">
+                                        {input subHeading, class => "form-control",  rows => "5"}
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="example-textarea">{label info}</label>
+                                    <div class="col-lg-12">
+                                        {input info, class => "form-control",  rows => "5"}
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="example-textarea">{label name_pretty}</label>
+                                    <div class="col-lg-12">
+                                        {input name_pretty, class => "form-control",  rows => "5"}
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="example-textarea">{label file}</label>
+                                    <div class="col-lg-12">
+                                        {input file, class => "form-control",  rows => "5"}
+                                    </div>
+                                </div>
+                                <div class="pb-5">
+                                    
+                                    {if $page->extension}
+                                        <img src="{$basePath}/content/page/{$page->id}.{$page->extension}" height="150px">
+                                    {else}
+                                        Obrázek není vyplněn
+                                    {/if}
+                                </div>
+                                {input id}
+                                <div class="form-group row">
+                                    
+                                    <div class="col-lg-12">
+                                        {input send, class => "btn btn-success"}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>            
+                    {/form}
+                </div> <!-- end card body-->
+            </div> <!-- end card -->
+        </div>
+        <!-- end col-12 -->
+    </div> <!-- end row -->
+{/block}

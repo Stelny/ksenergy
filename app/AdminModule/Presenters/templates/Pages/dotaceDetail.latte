@@ -1,0 +1,112 @@
+{block content}
+    <div class="row">
+
+        <div class="col-12">
+            <a n:href="Pages:dotace $dotace[page_id]" class="btn btn-danger mb-2" title="">Zpět</a>
+        </div>
+
+
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    {form editDotace}
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="simpleinput">{label watt}</label>
+                                    <div class="col-lg-12">
+                                        {input watt, class => "form-control"}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="simpleinput">{label phase}</label>
+                                    <div class="col-lg-12">
+                                        {input phase, class => "form-control"}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="simpleinput">{label dotace_price}</label>
+                                    <div class="col-lg-12">
+                                        {input dotace_price, class => "form-control"}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="simpleinput">{label price}</label>
+                                    <div class="col-lg-12">
+                                        {input price, class => "form-control"}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="simpleinput">{label your_price}</label>
+                                    <div class="col-lg-12">
+                                        {input your_price, class => "form-control"}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="simpleinput">{label heading}</label>
+                                    <div class="col-lg-12">
+                                        {input heading, class => "form-control"}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="simpleinput">{label content}</label>
+                                    <div class="col-lg-12">
+                                        {input content, class => "form-control"}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="simpleinput">{label menic}</label>
+                                    <div class="col-lg-12">
+                                        {input menic, class => "form-control"}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="simpleinput">{label prebytky}</label>
+                                    <div class="col-lg-12">
+                                        {input prebytky, class => "form-control"}
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-lg-12 col-form-label"
+                                        for="simpleinput">{label regulace}</label>
+                                    <div class="col-lg-12">
+                                        {input regulace, class => "form-control"}
+                                    </div>
+                                </div>
+
+
+
+                                {input id}
+                                <div class="form-group row">
+                                    
+                                    <div class="col-lg-12">
+                                        {input send, class => "btn btn-success"}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>            
+                    {/form}
+                </div> <!-- end card body-->
+            </div> <!-- end card -->
+        </div>
+        <!-- end col-12 -->
+    </div> <!-- end row -->
+{/block}

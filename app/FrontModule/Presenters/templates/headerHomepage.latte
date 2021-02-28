@@ -2,7 +2,7 @@
 <html lang="cs">
 
 <head>
-	<title>Ksenergy</title>
+	<title>{$title}</title>
 	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -123,8 +123,10 @@
 								 FVE s Ohřevem teplé vody
 							 </a>
 							 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								 <a class="dropdown-item" href="/ohrev-teple-vody/1F-2,415kw">1F 2,415kw</a>
-								 <a class="dropdown-item" href="/ohrev-teple-vody/3F-4,795kw">3F 4,14 kW</a>
+
+							 		{foreach $ohrev as $item}
+									 	<a class="dropdown-item" href="{$basePath}/ohrev-teple-vody/{$item->name}">{$item->name_pretty}</a>
+									{/foreach}
 
 							 </div>
 						 </li>
@@ -133,20 +135,19 @@
 							FVE s	Akumulací do baterií
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-item" href="/akumulace-do-baterii/hybridni-s-baterii-1F-2,415kw">Hybridní s baterii 1F 2,415 kW</a>
-								<a class="dropdown-item" href="/akumulace-do-baterii/hybridni-s-baterii-1F-3,65kw">Hybridní s baterii 1F 3,65 kW</a>
-								<a class="dropdown-item" href="/akumulace-do-baterii/hybridni-s-baterii-3F-4,83kw">Hybridní s baterii 3F 4,83 kW</a>
-								<a class="dropdown-item" href="/akumulace-do-baterii/hybridni-s-baterii-3F-4,83kW-BAT-H2">hybridni s baterií 3F 4,83kW BAT H2</a>
+								{foreach $baterie as $item}
+									 	<a class="dropdown-item" href="{$basePath}/akumulace-do-baterii/{$item->name}">{$item->name_pretty}</a>
+									{/foreach}
 							</div>
 							</li>
-							<li class="nav-item">
-							 <a class="nav-link" href="/tepelna-cerpadla">Tepelná čerpadla</a>
-						 </li>
+					<li class="nav-item">
+							 <a class="nav-link" href="{plink MainPages:cerpadlo}">Tepelná čerpadla</a>
+					</li>
 				      <li class="nav-item">
-				        <a class="nav-link" href="/nase-galerie">Galerie</a>
+				        <a class="nav-link" href="{plink Gallery:default}">Galerie</a>
 				      </li>
 				      <li class="nav-item">
-				        <a class="nav-link" href="/kontakt ">Kontakt</a>
+				        <a class="nav-link" href="{plink Contact:default} ">Kontakt</a>
 				      </li>
 							<div class="mobile-contact">
 								<div class="mobile-contact-content">

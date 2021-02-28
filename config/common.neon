@@ -25,3 +25,6 @@ services:
 	- App\Model\PagesColumnModel
 	- App\Model\DotaceModel
 	- App\Model\DotaceKrajeModel
+	- App\Model\SettingsModel
+	- App\Model\GalleryModel
+	- App\Model\BlogModel

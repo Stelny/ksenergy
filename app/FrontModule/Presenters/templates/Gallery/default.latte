@@ -1,0 +1,21 @@
+{block title}Galerie{/block}
+{block content}
+    <div class="start-section">
+    <div class="container">
+        <h1>Nahlédněte nám po ruky a podívejte se, jak to bude vypadat u vás.</h1>
+    </div>
+  </div>
+  <div class="gallery-section">
+    <div class="container">
+      <div class="gallery-content spotlight-group">
+
+        {foreach $gallery as $item}
+            <a href="{$basePath}/content/gallery/{$item->id}.{$item->extension}" class="gallery-item spotlight">
+                <img src="{$basePath}/content/gallery/{$item->id}.{$item->extension}" alt="">
+            </a>
+        {/foreach}
+
+      </div>
+    </div>
+  </div>
+{/block}
