@@ -1920,6 +1920,29 @@ section.hp-new {
 	justify-content: space-between;
 }
 
+.complete {
+	padding: 150px 0;
+	text-align: center;
+}
+.complete h1::after {
+	left: 50%;
+	transform: translateX(-50%);
+}
+.complete h1 {
+	padding-bottom: 20px;
+}
+.yellow-button, .yellow-button:hover {
+	padding: 15px 20px;
+	background-color: #E8BA00;
+	color: #042756;
+	font-weight: 600;
+	font-size: 13px;
+	display: block;
+	margin-top: 80px;
+	max-width: fit-content;
+	margin: auto;
+}
+
 @media (max-width: 776px) { 
 	.blog__preview  {
 		flex-direction: column;

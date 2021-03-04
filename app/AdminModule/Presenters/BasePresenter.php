@@ -17,7 +17,7 @@ abstract class BasePresenter extends Presenter
         $session->start();
         
         if (!$section->auth) {
-            $this->redirect('Auth:In');
+            $this->redirect('Auth:in');
         }
     }
 }
